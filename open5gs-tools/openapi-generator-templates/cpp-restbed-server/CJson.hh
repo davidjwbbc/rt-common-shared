@@ -111,6 +111,7 @@ public:
         if (m_owner && m_node) cJSON_Delete(m_node);
         m_node = cJSON_Duplicate(other.m_node, 1);
         m_owner = true;
+        return *this;
     }
 
     CJson &operator=(CJson &&other) {
